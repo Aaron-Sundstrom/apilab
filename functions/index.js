@@ -11,7 +11,7 @@ const db = admin.firestore();
 const docRef = db.collection('Facts').doc('Advice');
 
 // Scheduled Pub/Sub function
-exports.pubsub = onSchedule("* * * * *", async () => {
+exports.pubsub = onSchedule("0 0 *  * FRI", async () => {
     console.log("Scheduled function started");
 
     try {
